@@ -31,6 +31,7 @@ var getJSONData = function(url){
           result.data = response;
           hideSpinner();
           return result;
+          
     })
     .catch(function(error) {
         result.status = 'error';
