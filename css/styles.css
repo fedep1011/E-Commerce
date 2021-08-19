@@ -139,3 +139,16 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+
+.contenedor {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  text-align: center;
+}
+
+.contenedor input.form-control{
+  margin: 10px 0px;
+}
