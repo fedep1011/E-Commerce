@@ -48,9 +48,20 @@ function logeado(){
 }
 
 
+function mostrarNombre(){
+  let variableNombre = JSON.parse(sessionStorage.getItem("datosusuarios"))
+  let htmlContentToAppend = "";
+  htmlContentToAppend += (variableNombre[0].username)
+
+
+  document.getElementById("nombreUsuario").innerHTML = htmlContentToAppend;
+}
+
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
   logeado()
+  mostrarNombre()
 });

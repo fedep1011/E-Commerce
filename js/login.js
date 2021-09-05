@@ -8,7 +8,6 @@ const login = () => {
   if (username && password) {
     datausuarios.push({
       username,
-      password,
     });
     sessionStorage.setItem("datosusuarios", JSON.stringify(datausuarios));
     window.location.href = "index.html";
