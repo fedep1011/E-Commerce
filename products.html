@@ -23,22 +23,50 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <a class="py-2 d-none d-md-inline-block" id="nombreUsuario" href="my-profile.html""></a>
     </div>
   </nav>
 
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+  <div class=" container">
     </div>
-  </div>
-  <div id="products-container"></div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/products.js"></script>
+    <div class="row justify-content-end">
+      <div class="col-md-6"></div>
+      <div class="col-md-6 col-sm-12 mb-1 container">
+        <div class="row container p-0 m-0">
+          <div class="col-7 p-0">
+            <div class="btn-group" role="group">
+              <button class="btn btn-white btn-block"></button>
+              <button class="btn btn-light btn-block" id="ordrelevancia">Relevancia</button>
+              <button class="btn btn-light btn-block" id="precioasc">Precio Ascendente</button>
+              <button class="btn btn-light btn-block" id="preciodesc">Precio Descendente</button>
+              <button class="btn btn-light btn-block" id="rangeFilterCost">Filtrar</button>
+              <button class="btn btn-light btn-block" id="clearRangeFilter">Limpiar</button>
+
+            </div>
+            <input style=" text-align: center; margin-left: 18px;" class="form-control" type=number id="minimo"
+              placeholder="Mínimo"> </input>
+            <input style=" text-align: center; margin-left: 18px;" class="form-control" type=number id="maximo"
+              placeholder="Máximo"> </input>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="spinner-wrapper">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="products-container"></div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/products.js"></script>
 </body>
 
 </html>
