@@ -33,20 +33,33 @@
       <div class="col-md-6"></div>
       <div class="col-md-6 col-sm-12 mb-1 container">
         <div class="row container p-0 m-0">
-          <div class="col-7 p-0">
-            <div class="btn-group" role="group">
-              <button class="btn btn-white btn-block"></button>
-              <button class="btn btn-light btn-block" id="ordrelevancia">Relevancia</button>
-              <button class="btn btn-light btn-block" id="precioasc">Precio Ascendente</button>
-              <button class="btn btn-light btn-block" id="preciodesc">Precio Descendente</button>
-              <button class="btn btn-light btn-block" id="rangeFilterCost">Filtrar</button>
-              <button class="btn btn-light btn-block" id="clearRangeFilter">Limpiar</button>
-
+          <div class="col-5 p-0">
+            <div  class="btn-group btn-group-toggle" data-toggle="buttons" role="group">
+              <button class="btn btn-white btn-block "></button>
+              <label for="" id="ordrelevancia" class="btn btn-light btn-block btn btn-secondary">
+                <input type="radio" >Relevancia
+            </label>
+            <label for="" id="precioasc" class="btn btn-light btn-block btn btn-secondary">
+              <input type="radio" >Precio Ascendente
+            </label>
+            <label for="" id="preciodesc" class="btn btn-light btn-block btn btn-secondary">
+              <input type="radio" >Precio Descendente
+            </label>
             </div>
             <input style=" text-align: center; margin-left: 18px;" class="form-control" type=number id="minimo"
-              placeholder="Mínimo"> </input>
+              placeholder="Mínimo" min="0"> </input>
             <input style=" text-align: center; margin-left: 18px;" class="form-control" type=number id="maximo"
-              placeholder="Máximo"> </input>
+              placeholder="Máximo" min="0"> </input>
+              
+              <div class="btn-group btn-group-toggle col-md-10  mb-1 container">
+              <button class="btn btn-white btn-block "></button>
+              <label for="" id="rangeFilterCost" class="btn btn-light btn-block btn btn-secondary">
+              <input type="radio" >Filtrar
+              </label>
+              <label for="" id="clearRangeFilter" class="btn btn-light btn-block btn btn-secondary">
+              <input type="radio"  >Limpiar
+              </label>
+            </div>
           </div>
         </div>
       </div>
@@ -62,7 +75,13 @@
         <div></div>
       </div>
     </div>
-    <div id="products-container"></div>
+    <div class="container mt-5" id="products-container"></div>
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Volver arriba</a>
+      </div>
+    </footer>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
