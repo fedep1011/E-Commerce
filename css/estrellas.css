@@ -1,0 +1,29 @@
+
+
+form p,
+form input[type="submit"] {
+  text-align: left;
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: rgb(246,160,10)
+  ;
+}
+
+input[type="radio"]:checked ~ label {
+  color: rgb(246,160,10)
+  ;
+}

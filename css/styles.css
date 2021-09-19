@@ -152,3 +152,7 @@ a.custom-card:hover {
 .contenedor input.form-control{
   margin: 10px 0px;
 }
+
+.imagenesInfo{
+  max-width: 250px;
+}
