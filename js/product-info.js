@@ -98,14 +98,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
             showImagesGallery(product.images);
             
         }
+
+        getJSONData(PRODUCTS_URL).then(function(resultObj){
+            if (resultObj.status === "ok") {
+                infoProducts = resultObj.data;
+                productosRelacionados(infoProducts)
+            }
+        });
     });
 
-    getJSONData(PRODUCTS_URL).then(function(resultObj){
-        if (resultObj.status === "ok") {
-            infoProducts = resultObj.data;
-            productosRelacionados(infoProducts)
-        }
-    });
+   
 
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultObj) {
         if (resultObj.status === "ok") {
@@ -116,5 +118,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
 
     document.getElementById("enviarComentario").addEventListener("click", alertaComentario)
+  
     
 });
