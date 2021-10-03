@@ -54,6 +54,28 @@ function showComments(array) {
 }
 
 
+function productosRelacionados(array){
+    let htmlContentToAppend = ""
+    for (let r = 0; r < product.relatedProducts.length; r++){
+        let medidor = product.relatedProducts[r];
+        let datos = array[medidor];
+        htmlContentToAppend += `<p> <div class=" card">
+        <img src="`+datos.imgSrc+`" alt="Denim Jeans" style="width:100%">
+        <h1>`+datos.name+`</h1>
+        <section class="price">`+datos.currency+datos.cost+`</section>
+        <section>`+datos.description+`</section>
+        <section><button> <a href="/product-info.html" style="color: white; text-decoration:none"> Ir al producto </a></button></section>
+      </div></p>`
+      
+    }
+
+document.getElementById("relatedProducts").innerHTML += htmlContentToAppend
+}
+// product.relatedProducts 1 y 3
+// infoProducts datos de los productos
+
+
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -74,6 +96,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
             //Muestro las imagenes en forma de galería
             showImagesGallery(product.images);
+            
+        }
+    });
+
+    getJSONData(PRODUCTS_URL).then(function(resultObj){
+        if (resultObj.status === "ok") {
+            infoProducts = resultObj.data;
+            productosRelacionados(infoProducts)
         }
     });
 
