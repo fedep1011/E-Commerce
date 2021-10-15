@@ -1,4 +1,4 @@
-.card {
+.tarjeta {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
@@ -14,7 +14,7 @@
     font-size: 22px;
   }
   
-  .card button {
+  .tarjeta button {
     border: none;
     outline: 0;
     padding: 12px;
@@ -26,6 +26,10 @@
     font-size: 18px;
   }
   
-  .card button:hover {
+  .tarjeta button:hover {
     opacity: 0.7;
   }
+
+
+  
+ 
