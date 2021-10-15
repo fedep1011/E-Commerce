@@ -65,7 +65,7 @@ function subTotalEnvio() {
     let subTotal = unitCost * cantidad;
     // console.log(subTotal)
 
-    document.getElementById("subTotal").innerHTML = "UYU" + " " + subTotal
+    document.getElementById("subTotal").innerHTML = "UYU" + " " + Math.trunc(subTotal)
     if (document.getElementById("envioStandard").checked) {
         let subTotal = document.getElementById("subTotal").innerHTML;
         let subTotalNumero = subTotal.replace(/\D/g, "")
