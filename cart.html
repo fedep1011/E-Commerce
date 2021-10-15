@@ -76,7 +76,13 @@
                             <p style="margin-top: 5px;"> Express </p>
                             <input id="envioPremium" type="radio" class="form-control " name="tipoEnvio" >
                             <p style="margin-top: 5px;"> Premium </p>
+                     
+                           
                             
+                            
+                        </div>
+                        <div class="row">
+                          <button type="button" class="m-1 btn btn-link" data-toggle="modal" data-target="#contidionsModal">Ver condiciones</button>
                         </div>
                     </form>
                 </div>
@@ -104,6 +110,41 @@
 
 </div> 
 
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Costos de Envío</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <h5 class="text-warning">Estándar (5%)</h5>
+                <p class="muted text-justify">Se calculará el 5% sobre el subTotal de tu compra</p>
+            </div>
+            <hr>
+            <div class="row">
+                <h5 class="text-primary">Express (7%)</h5>
+                <p class="muted text-justify">Se calculará el 7% sobre el subTotal de tu compra</p>
+            </div>
+            <hr>
+            <div class="row">
+                <h5 class="text-secondary">Premium (15%)</h5>
+                <p class="muted text-justify">Se calculará el 15% sobre el subTotal de tu compra</p>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   
   <div id="spinner-wrapper">
