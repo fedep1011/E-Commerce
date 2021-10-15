@@ -59,7 +59,7 @@ function productosRelacionados(array){
     for (let r = 0; r < product.relatedProducts.length; r++){
         let medidor = product.relatedProducts[r];
         let datos = array[medidor];
-        htmlContentToAppend += `<p> <div class=" card">
+        htmlContentToAppend += `<p> <div class=" tarjeta">
         <img src="`+datos.imgSrc+`" alt="Denim Jeans" style="width:100%">
         <h1>`+datos.name+`</h1>
         <section class="price">`+datos.currency+datos.cost+`</section>
