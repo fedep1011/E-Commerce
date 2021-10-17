@@ -33,6 +33,8 @@
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
   <link href="css/card.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,8 +45,9 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <div class="dropdown">
-        <button  style="background:#343941; border: none;" class="btn btn-secondary dropdown-toggle" type="button" id="nombreUsuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          </button>
+        <button style="background:#343941; border: none;" class="btn btn-secondary dropdown-toggle" type="button"
+          id="nombreUsuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a style="text-align: center;" class="dropdown-item" href="my-profile.html">Mi Perfil👤</a>
           <a style="text-align: center;" class="dropdown-item" href="cart.html">Carrito 🛒</a>
@@ -58,95 +61,164 @@
 
 
 
-<div class="container mt-5" > 
-  <div class="container-fluid">
-    <div  class="row"> 
-      <p id="carrito"></p>
+  <div class="container mt-5">
+    <div class="container-fluid">
+      <div class="row">
+        <p id="carrito"></p>
         <aside class="col-lg-5">
-            <div class= "card mb-3">
-                <div class="card-body">
-                    <form>
-                        <div class="form-group"> <label>Tipo de Envío</label>
+          <div class="card mb-3">
+            <div class="card-body">
+              <form>
+                <div class="form-group"> <label>Tipo de Envío</label>
 
-                  
-                            <div id="envio" class="input-group">
-                            <input id="envioStandard"type="radio" class="form-control  " name="tipoEnvio" >
-                            <p style="margin-top: 5px;"> Standard </p>
-                            <input id="envioExpress" type="radio" class="form-control " name="tipoEnvio" >
-                            <p style="margin-top: 5px;"> Express </p>
-                            <input id="envioPremium" type="radio" class="form-control " name="tipoEnvio" >
-                            <p style="margin-top: 5px;"> Premium </p>
-                     
-                           
-                            
-                            
-                        </div>
-                        <div class="row">
-                          <button type="button" class="m-1 btn btn-link" data-toggle="modal" data-target="#contidionsModal">Ver condiciones</button>
-                        </div>
-                    </form>
-                </div>
+
+                  <div id="envio" class="input-group">
+                    <input id="envioStandard" type="radio" class="form-control  " name="tipoEnvio">
+                    <p style="margin-top: 5px;"> Standard </p>
+                    <input id="envioExpress" type="radio" class="form-control " name="tipoEnvio">
+                    <p style="margin-top: 5px;"> Express </p>
+                    <input id="envioPremium" type="radio" class="form-control " name="tipoEnvio">
+                    <p style="margin-top: 5px;"> Premium </p>
+
+
+
+
+                  </div>
+                  <div class="row">
+                    <button type="button" class="m-1 btn btn-link" data-toggle="modal"
+                      data-target="#contidionsModal">Ver condiciones</button>
+                  </div>
+              </form>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <dl  class="dlist-align">
-                        <dt>Subtotal:</dt>
-                        <dd id="subTotal" class="text-right ml-3"></dd>
-                    </dl>
-                    <dl  class="dlist-align">
-                        <dt>Envío:</dt>
-                        <dd id="envioCost" class="text-right ml-3"></dd>
-                    </dl>
-                    <dl  class="dlist-align">
-                        <dt>Total:</dt>
-                        <dd id="total" class="text-right text-dark b ml-3"><strong> </strong></dd>
-                    </dl>
-                    <hr> <a style="color: white" href="/products.html" class="btn btn-out btn-primary btn-square btn-main" data-abc="true"> Sigue Comprando </a> <a id="finalizarCompra" style="color: white" class="btn btn-out btn-success btn-square btn-main" data-abc="true">Finaliza la Compra</a>
-                </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <dl class="dlist-align">
+                <dt>Subtotal:</dt>
+                <dd id="subTotal" class="text-right ml-3"></dd>
+              </dl>
+              <dl class="dlist-align">
+                <dt>Envío:</dt>
+                <dd id="envioCost" class="text-right ml-3"></dd>
+              </dl>
+              <dl class="dlist-align">
+                <dt>Total:</dt>
+                <dd id="total" class="text-right text-dark b ml-3"><strong> </strong></dd>
+              </dl>
+              <hr> <a style="color: white" href="/products.html" class="btn btn-out btn-primary btn-square btn-main"
+                data-abc="true"> Sigue Comprando </a>
+              <button type="button" id="finalizarCompra" style="height: 29px;" class="btn btn-primary launch"
+                data-toggle="modal" data-target="#staticBackdrop"> <i class="fa fa-rocket"></i> Finalizar Compra
+              </button>
             </div>
+          </div>
         </aside>
+      </div>
     </div>
-</div>
 
-</div> 
-
+  </div>
 
 
-<div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Costos de Envío</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-            <div class="row">
-                <h5 class="text-warning">Estándar (5%)</h5>
-                <p class="muted text-justify">Se calculará el 5% sobre el subTotal de tu compra</p>
-            </div>
-            <hr>
-            <div class="row">
-                <h5 class="text-primary">Express (7%)</h5>
-                <p class="muted text-justify">Se calculará el 7% sobre el subTotal de tu compra</p>
-            </div>
-            <hr>
-            <div class="row">
-                <h5 class="text-secondary">Premium (15%)</h5>
-                <p class="muted text-justify">Se calculará el 15% sobre el subTotal de tu compra</p>
-            </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Costos de Envío</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <h5 class="text-warning">Estándar (5%)</h5>
+              <p class="muted text-justify">Se calculará el 5% sobre el subTotal de tu compra</p>
+            </div>
+            <hr>
+            <div class="row">
+              <h5 class="text-primary">Express (7%)</h5>
+              <p class="muted text-justify">Se calculará el 7% sobre el subTotal de tu compra</p>
+            </div>
+            <hr>
+            <div class="row">
+              <h5 class="text-secondary">Premium (15%)</h5>
+              <p class="muted text-justify">Se calculará el 15% sobre el subTotal de tu compra</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-  
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="text-right"> <i class="fa fa-close close" data-dismiss="modal"></i> </div>
+          <div class="tabs mt-3">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation"> <a class="nav-link active" id="visa-tab" data-toggle="tab"
+                  href="#visa" role="tab" aria-controls="visa" aria-selected="true"> <img src="/img/mastercard.png"
+                    width="80"> </a> </li>
+              <li class="nav-item" role="presentation"> <a class="nav-link" id="paypal-tab" data-toggle="tab"
+                  href="#paypal" role="tab" aria-controls="paypal" aria-selected="false"> <img src="/img/paypal.png"
+                    width="80"> </a> </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="visa" role="tabpanel" aria-labelledby="visa-tab">
+                <div class="mt-4 mx-4">
+                  <div class="text-center">
+                    <h5>Tarjeta de credito</h5>
+                  </div>
+                  <form action="">
+                    <div class="form mt-3">
+                      <div class="inputbox"> <input type="text" name="name" class="form-control" required="required">
+                        <span>Nombre</span>
+                      </div>
+                      <div class="inputbox"> <input type="number" name="name" min="100000000" max=""
+                          class="form-control" required="required"> <span>Numero de la Tarjeta</span> <i
+                          class="fa fa-eye"></i> </div>
+                      <div class="d-flex flex-row">
+                        <div class="inputbox"> <input type="date" name="name" min="1" max="999" class="form-control"
+                            required="required"> <span>Fecha de vencimiento</span> </div>
+                        <div class="inputbox"> <input type="number" name="name" min="1" max="999" class="form-control"
+                            required="required"> <span>CVV</span> </div>
+                      </div>
+                      <div class="px-5 pay"> <button id="finalizarCompraTarjeta"
+                          class="btn btn-success btn-block">Añadir Tarjeta</button> </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="paypal" role="tabpanel" aria-labelledby="paypal-tab">
+              <div class="px-5 mt-5">
+                <form action="">
+                  <div class="inputbox"> <input type="email" name="name" class="form-control" required="required">
+                    <span>Dirección de Email de Paypal</span>
+                  </div>
+                  <div class="pay px-5"> <button id="finalizarCompraPaypal" class="btn btn-primary btn-block">Añadir
+                      paypal</button> </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
