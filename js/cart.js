@@ -1,8 +1,3 @@
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
-
-
 
 
 function cartInfo(cart) {
@@ -129,7 +124,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
 
      
-        document.getElementById("finalizarCompra").addEventListener("click", function (a) {
+        document.getElementById("finalizarCompraTarjeta").addEventListener("click", function (a) {
+            if (document.getElementById("envioExpress").checked || document.getElementById("envioStandard").checked || document.getElementById("envioPremium").checked) {
+                alert("Muchas gracias por su compra")
+            }
+            else {
+                alert("Por favor selecciona un método de envío válido")
+            }
+        })
+
+        document.getElementById("finalizarCompraPaypal").addEventListener("click", function (a) {
             if (document.getElementById("envioExpress").checked || document.getElementById("envioStandard").checked || document.getElementById("envioPremium").checked) {
                 alert("Muchas gracias por su compra")
             }
@@ -139,6 +143,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         })
 }})
 
-    
+
 });
 
