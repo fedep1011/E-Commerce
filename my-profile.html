@@ -33,7 +33,7 @@
   <link href="css/dropzone.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="fondo">
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
@@ -51,32 +51,84 @@
       </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
-  <footer class="text-muted bg-light">
-    <div class="container">
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
-  <div class="alert fade alert-success" role="alert" id="alertResult">
-    <span id="resultSpan"></span>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+          <div class="card">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <h4 style="text-align: center;">Tu Perfil</h4>
+                          <hr>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <form>
+                                <div class="form-group row">
+                                  <label for="username" class="col-4 col-form-label">Nombre de Usuario*</label> 
+                                  <div class="col-8">
+                                    <input id="username" name="username" placeholder="Username" class="form-control here" readonly required="required" type="text">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="name" class="col-4 col-form-label">Nombre*</label> 
+                                  <div class="col-8">
+                                    <input id="name" name="nombre" placeholder="Nombre" class="form-control here" type="text" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="lastname" class="col-4 col-form-label">Apellido*</label> 
+                                  <div class="col-8">
+                                    <input id="lastname" name="apellido" placeholder="Apellido" class="form-control here" type="text" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="email" class="col-4 col-form-label">Email*</label> 
+                                  <div class="col-8">
+                                    <input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="email">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="edad" class="col-4 col-form-label">Edad*</label> 
+                                  <div class="col-8">
+                                    <input id="age" name="website" placeholder="Edad" class="form-control here" type="number" min="18" max="100" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="telefono" class="col-4 col-form-label">Teléfono*</label> 
+                                  <div class="col-8">
+                                    <input id="phone" name="telefono" placeholder="Teléfono" class="form-control here" type="tel" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="offset-4 col-8">
+                                    <button id="newData" name="button" type="button" class="btn btn-primary">Actualizar mi perfil</button>
+                                    <br>
+                                    <br>
+                                    <div class="alert-info" style="width: fit-content;">
+                                      <strong>*</strong> Todos los campos son obligatorios.
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                              
+                      </div>
+                  </div>
+                  <div  id="alertBox">
+
+                    
+
+                  </div>
+
+                  <div  id="alertBox2">
+
+                    
+
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
   </div>
   <script src="js/jquery-3.4.1.min.js"></script>

@@ -23,8 +23,9 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <div class="dropdown">
-        <button  style="background:#343941; border: none;" class="btn btn-secondary dropdown-toggle" type="button" id="nombreUsuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          </button>
+        <button style="background:#343941; border: none;" class="btn btn-secondary dropdown-toggle" type="button"
+          id="nombreUsuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a style="text-align: center;" class="dropdown-item" href="my-profile.html">Mi Perfil👤</a>
           <a style="text-align: center;" class="dropdown-item" href="cart.html">Carrito 🛒</a>
@@ -34,7 +35,7 @@
     </div>
   </nav>
 
-  <div class=" container">
+  <!-- <div class=" container">
     </div>
     <div class="row justify-content-end">
       <div class="col-md-6"></div>
@@ -72,27 +73,85 @@
       </div>
     </div>
     </div>
+    </div> -->
+<div class="con">
+  <div class="container">
+    <div class="dropdown">
+      <div class="row">
+      <button style="background:#d9dce1; border: none; color: black; width: 20%; min-width: 125px; text-align: center; margin-bottom: 10px;" class="btn btn-secondary dropdown-toggle"
+        type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Ordenar Por </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="btn-group-toggle" data-toggle="buttons" role="group">
+          <label for="" id="ordrelevancia"  class="btn btn-light btn-block btn btn-secondary">
+            <input type="radio">Relevancia
+          </label>
+          <label for="" id="precioasc"  class="btn btn-light btn-block btn btn-secondary">
+            <input type="radio">Precio Ascendente
+          </label>
+          <label for="" id="preciodesc"  class="btn btn-light btn-block btn btn-secondary">
+            <input type="radio">Precio Descendente
+          </label>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 
-    <div id="spinner-wrapper">
-      <div class="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+<div class="container">
+  <div class="row">
+    <input  class="form-control " style="margin-bottom: 15px; width: 20%; min-width: 100px; text-align: center;" type=number id="minimo"
+    placeholder="Mínimo" min="0"> </input>
+  <input  class="form-control " style="margin-bottom: 15px; width: 20%; min-width: 100px; text-align: center;" type=number id="maximo"
+    placeholder="Máximo" min="0"> </input>  
+  </div>
+  </div>
+  <div class="container">
+    <div class="row">
+    <div style="margin-bottom: 25px; ;" class="btn-group-toggle">
+    <label for="" id="rangeFilterCost" style="display: inline; margin-bottom: 10px;" class=" btn-light btn-block btn btn-secondary ">
+    <input type="radio" class="row" >Filtrar
+    </label>
+    <label for="" id="clearRangeFilter" style="display: inline; margin-bottom: 40px;" class="btn-light btn-block btn btn-secondary ">
+    <input type="radio"  class="row" >Limpiar
+    </label>
+  </div>
+  
+  </div>
+</div>
+</div>
+  
+  <div class="container">
+    <div id="product-container" class="row">
+ 
     </div>
-    <div class="container mt-5" id="products-container"></div>
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Volver arriba</a>
-      </div>
-    </footer>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/products.js"></script>
+  </div>
+
+
+
+
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+
+  
+  <div class="container mt-5"></div>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Volver arriba</a>
+    </div>
+  </footer>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/products.js"></script>
 </body>
 
 </html>
