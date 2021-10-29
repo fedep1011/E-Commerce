@@ -1,3 +1,5 @@
+"use strict";
+
 const CATEGORIES_URL = "https://japdevdep.github.io/ecommerce-api/category/all.json";
 const PUBLISH_PRODUCT_URL = "https://japdevdep.github.io/ecommerce-api/product/publish.json";
 const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/1234.json";
@@ -43,14 +45,14 @@ var getJSONData = function(url){
 }
 
 function logeado(){
-  if (JSON.parse(sessionStorage.getItem("datosusuarios") == null)) {
+  if (JSON.parse(localStorage.getItem("datosusuarios") == null)) {
     window.location.href = "login.html"
   }
 }
 
 
 function mostrarNombre(){
-  let variableNombre = JSON.parse(sessionStorage.getItem("datosusuarios"))
+  let variableNombre = JSON.parse(localStorage.getItem("datosusuarios"))
   let htmlContentToAppend = "";
   htmlContentToAppend += (variableNombre[0].username) 
 
@@ -59,8 +61,10 @@ function mostrarNombre(){
 }
 
 function logOut(){
-  sessionStorage.removeItem("datosusuarios")
+  localStorage.removeItem("datosusuarios")
+  localStorage.removeItem("datosUsuarios")
 }
+
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los

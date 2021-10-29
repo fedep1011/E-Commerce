@@ -1,3 +1,4 @@
+"use strict";
 const datausuarios = [];
 
 const login = () => {
@@ -9,7 +10,7 @@ const login = () => {
     datausuarios.push({
       username,
     });
-    sessionStorage.setItem("datosusuarios", JSON.stringify(datausuarios));
+    localStorage.setItem("datosusuarios", JSON.stringify(datausuarios));
     window.location.href = "index.html";
   }
   else alert("Inserte Nombre de Usuario y Contraseña válidos");
