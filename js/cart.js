@@ -101,6 +101,9 @@ function costoTotal() {
 
 
 document.addEventListener("DOMContentLoaded", function (e) {
+
+    // console.log(document.getElementById("nameTarjeta").value !== null  )
+
     getJSONData(CART_INFO_URL).then(function (resultObj) {
         if (resultObj.status === "ok") {
             
@@ -125,24 +128,49 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
      
         document.getElementById("finalizarCompraTarjeta").addEventListener("click", function (a) {
-            if (document.getElementById("envioExpress").checked || document.getElementById("envioStandard").checked || document.getElementById("envioPremium").checked) {
+            if (document.getElementById("nameTarjeta").value  && 
+            document.getElementById("numberTarjeta").value  && 
+            document.getElementById("dateTarjeta").value  &&
+            document.getElementById("cvvTarjeta").value  ) {
                 alert("Muchas gracias por su compra")
             }
             else {
-                alert("Por favor selecciona un método de envío válido")
+                alert("Por favor pon un método de pago válido")
             }
         })
 
         document.getElementById("finalizarCompraPaypal").addEventListener("click", function (a) {
-            if (document.getElementById("envioExpress").checked || document.getElementById("envioStandard").checked || document.getElementById("envioPremium").checked) {
+            if (document.getElementById("mailPaypal").value) {
                 alert("Muchas gracias por su compra")
             }
             else {
-                alert("Por favor selecciona un método de envío válido")
+                alert("Por favor pon un email de Paypal válido")
             }
         })
+
+
+document.getElementById("finalizarCompra").addEventListener("click", function(e){
+    if (document.getElementById("calle").value &&
+    document.getElementById("numero").value &&
+    document.getElementById("esquina").value &&
+    document.getElementById("pais").value){
+
+    }
+
+    else{
+        alert("Ingrese los datos de envío correctamente")
+        window.location.href = "cart.html"
+    }
+
+})
+
 }})
+
+
 
 
 });
 
+document.getElementById("continueBuy").addEventListener("click", function (e){
+    window.location.href= "products.html"
+})
